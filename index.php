@@ -8,7 +8,7 @@ include("validation.php");
 $parts = array("AP-12-3507", "  ap-99-X109  ", "SG-05-ab20",
     "ab-22-N250", "SG-xx-N250", "SG-22-250", "SG-22-250*");
 foreach ($parts as $part) {
-    if (validPart($part)) {
+    if (validPartRx($part)) {
         echo "$part is valid.<br>";
     }
     else{

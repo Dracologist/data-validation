@@ -25,3 +25,10 @@ function validPart($input){
         return true;
     }
 }
+function validPartRx($input){
+    $valid = preg_match("/hw/i", $input) ||
+        preg_match("/sg/i", $input) || preg_match("/ap/i", $input);
+    $regex = "/[hsa][wgp]-\d\d-\w\w\w\w/i";
+    $valid = $valid && preg_match($regex, $input);
+    return $valid;
+}
